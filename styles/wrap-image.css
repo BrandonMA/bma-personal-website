@@ -1,0 +1,35 @@
+@keyframes tickle {
+    20% {
+        transform: rotate3d(0, 0, 1, 8deg) scale(1.1);
+    }
+
+    40% {
+        transform: rotate3d(0, 0, 1, -8deg);
+    }
+
+    60% {
+        transform: rotate3d(0, 0, 1, 3deg);
+    }
+
+    80% {
+        transform: rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        transform: rotate3d(0, 0, 1, 0deg) scale(1);
+    }
+}
+
+.wrap-image {
+    width: 256px;
+    height: 198px;
+    overflow: hidden;
+    box-shadow: var(--chakra-shadows-lg);
+}
+
+.wrap-image:hover {
+    animation-name: tickle;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    cursor: pointer;
+}

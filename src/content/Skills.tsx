@@ -15,12 +15,17 @@ export function Skills(): ReactElement {
                         <WrapTag>HTML</WrapTag>
                         <WrapTag colorScheme='red'>CSS</WrapTag>
                         <WrapTag colorScheme='yellow'>JavaScript</WrapTag>
+                        <WrapTag colorScheme='blue'>TypeScript</WrapTag>
                         <WrapTag colorScheme='blue'>React</WrapTag>
+                        <WrapTag colorScheme='blue'>React Native</WrapTag>
                         <WrapTag colorScheme='purple'>Redux</WrapTag>
                         <WrapTag colorScheme='blue'>Recoil.JS</WrapTag>
                         <WrapTag>Next.JS</WrapTag>
                         <WrapTag colorScheme='orange'>Swift</WrapTag>
                         <WrapTag colorScheme='green'>Kotlin</WrapTag>
+                        <WrapTag colorScheme='pink'>Framer Motion</WrapTag>
+                        <WrapTag colorScheme='purple'>Expo</WrapTag>
+                        <WrapTag colorScheme='green'>Python</WrapTag>
                     </Wrap>
                 </WrapCell>
                 <WrapCell title='Tools'>

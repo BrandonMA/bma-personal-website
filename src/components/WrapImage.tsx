@@ -1,6 +1,6 @@
 import { ReactElement, useCallback, useState } from 'react';
 import Image from 'next/image';
-import { WrapItem } from '@chakra-ui/react';
+import { WrapItem, Link } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -22,15 +22,23 @@ export function WrapImage({ certificate }: Props): ReactElement {
 
     return (
         <WrapItem>
-            <motion.div
-                variants={variants}
-                initial={'loading'}
-                animate={loaded ? 'loaded' : 'loading'}
-                transition={{ duration: 0.6, type: 'spring' }}
-                style={{ overflow: 'hidden', width: 256, height: 198 }}
-            >
-                <Image onLoad={setLoadedActive} alt={'Certificate'} width={256} height={198} src={`/image-certificates/${certificate}`} />
-            </motion.div>
+            <Link href={`/image-certificates/${certificate}`} target={'_blank'}>
+                <motion.div
+                    className={'wrap-image'}
+                    variants={variants}
+                    initial={'loading'}
+                    animate={loaded ? 'loaded' : 'loading'}
+                    transition={{ duration: 0.6, type: 'spring' }}
+                >
+                    <Image
+                        onLoad={setLoadedActive}
+                        alt={'Certificate'}
+                        width={256}
+                        height={198}
+                        src={`/image-certificates/${certificate}`}
+                    />
+                </motion.div>
+            </Link>
         </WrapItem>
     );
 }
