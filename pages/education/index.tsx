@@ -6,7 +6,7 @@ import { Header } from '../../src/components/Header';
 import { SchoolsDescription } from '../../src/content/SchoolsDescription';
 import { Schools } from '../../src/content/Schools';
 import { CertificatesDescription } from '../../src/content/CertificatesDescription';
-import Image from 'next/image';
+import { CertificatesList } from '../../src/content/CertificatesList';
 
 export default function Education(): ReactElement {
     return (
@@ -19,9 +19,9 @@ export default function Education(): ReactElement {
                         <SchoolsDescription />
                         <Schools />
                         <CertificatesDescription />
-                        <Image src={'/image-certificates/diploma-bd.png'} alt={'Diploma Bases de Datos'} height={128} width={128} />
                     </VStack>
                 </ScaleFade>
+                <CertificatesList />
             </Background>
         </ChakraProvider>
     );
