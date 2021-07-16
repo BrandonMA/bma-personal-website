@@ -1,0 +1,8 @@
+.cell {
+    transition: all 0.3s ease-in-out;
+}
+
+.cell:hover {
+    box-shadow: var(--chakra-shadows-lg);
+    transform: scale(1.1);
+}
