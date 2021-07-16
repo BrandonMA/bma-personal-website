@@ -1,13 +1,9 @@
-import { Box, Button, Heading, Text, Container, VStack } from '@chakra-ui/react';
-import React, { ReactElement, useCallback, useState } from 'react';
+import { Box, Button, Heading, Text, Container, VStack, Link } from '@chakra-ui/react';
+import React, { ReactElement } from 'react';
 import { ProfilePicture } from '../components/ProfilePicture';
 import { Hello } from '../components/Hello';
-import { ContactModal } from './ContactModal';
 
 export function Contact(): ReactElement {
-    const [isModalVisible, setModalVisible] = useState(false);
-    const toggleModal = useCallback(() => setModalVisible((current) => !current), []);
-
     return (
         <VStack spacing='24px' justifyContent='center' flexDirection='column' alignItems='center'>
             <Box>
@@ -27,10 +23,11 @@ export function Contact(): ReactElement {
                     </Text>
                 </VStack>
             </Container>
-            <Button onClick={toggleModal} borderRadius={20} colorScheme='orange'>
-                Contact me
-            </Button>
-            <ContactModal isVisible={isModalVisible} onClose={toggleModal} />
+            <Link href={'mailto:brandonma98@protonmail.com'}>
+                <Button borderRadius={20} colorScheme='orange'>
+                    Contact me
+                </Button>
+            </Link>
         </VStack>
     );
 }
