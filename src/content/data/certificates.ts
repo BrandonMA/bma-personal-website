@@ -1,0 +1,23 @@
+export const certificates = [
+    'diploma-asincronismo-js.png',
+    'diploma-basico-javascript.png',
+    'diploma-bd.png',
+    'diploma-ecmascript-6.png',
+    'diploma-frontend-developer.png',
+    'diploma-html-practico.png',
+    'di ploma-javascript-profesional.png',
+    'diploma-mongodb.png',
+    'diploma-npm.png',
+    'diploma-postman.png',
+    'diploma-python-cs.png',
+    'diploma-python.png',
+    'diploma-react-ejs.png',
+    'dipl oma-react-hooks.png',
+    'diploma-react-native.png',
+    'diploma-react-router-redux.png',
+    'diploma-react.png',
+    'diploma-redux.png',
+    'diploma-scope.png',
+    'diploma-webpack.png',
+    'getNam es.py'
+];
