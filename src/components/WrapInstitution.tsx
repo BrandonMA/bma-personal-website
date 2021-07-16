@@ -10,12 +10,12 @@ interface Props {
     schoolHref: string;
 }
 
-export function WrapSchool({ schoolHref, children, description, date, image }: Props): ReactElement {
+export function WrapInstitution({ schoolHref, children, description, date, image }: Props): ReactElement {
     return (
         <WrapItem>
             <Link href={schoolHref} target={'_blank'}>
                 <Cell flexDirection={'row'}>
-                    <Image width={128} marginRight={4} alt={'ECE Logo'} src={image} />
+                    <Image borderRadius={'8px'} width={128} marginRight={4} alt={'ECE Logo'} src={image} />
                     <Flex flexDirection={'column'} justifyContent={'center'} maxWidth={300}>
                         <Text>{description}</Text>
                         <Heading marginTop={2} marginBottom={2} size={'md'}>
