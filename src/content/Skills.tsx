@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Heading, VStack, Wrap } from '@chakra-ui/react';
-import { WrapCell } from '../components/WrapCell';
+import { WrapTitleCell } from '../components/WrapTitleCell';
 import { WrapTag } from '../components/WrapTag';
 
 export function Skills(): ReactElement {
@@ -10,7 +10,7 @@ export function Skills(): ReactElement {
                 Skills & Knowledge
             </Heading>
             <Wrap justify='center'>
-                <WrapCell title='Programming Languages & Frameworks'>
+                <WrapTitleCell title='Programming Languages & Frameworks'>
                     <Wrap>
                         <WrapTag>HTML</WrapTag>
                         <WrapTag colorScheme='red'>CSS</WrapTag>
@@ -27,8 +27,8 @@ export function Skills(): ReactElement {
                         <WrapTag colorScheme='purple'>Expo</WrapTag>
                         <WrapTag colorScheme='green'>Python</WrapTag>
                     </Wrap>
-                </WrapCell>
-                <WrapCell title='Tools'>
+                </WrapTitleCell>
+                <WrapTitleCell title='Tools'>
                     <Wrap>
                         <WrapTag>Git / Github</WrapTag>
                         <WrapTag colorScheme='purple'>Heroku</WrapTag>
@@ -37,8 +37,8 @@ export function Skills(): ReactElement {
                         <WrapTag colorScheme='red'>Firebase</WrapTag>
                         <WrapTag colorScheme='orange'>AWS</WrapTag>
                     </Wrap>
-                </WrapCell>
-                <WrapCell title='Competences'>
+                </WrapTitleCell>
+                <WrapTitleCell title='Competences'>
                     <Wrap>
                         <WrapTag>Adaptability</WrapTag>
                         <WrapTag>Creativity</WrapTag>
@@ -46,7 +46,7 @@ export function Skills(): ReactElement {
                         <WrapTag>Strategic Thinking</WrapTag>
                         <WrapTag>Bilingual</WrapTag>
                     </Wrap>
-                </WrapCell>
+                </WrapTitleCell>
             </Wrap>
         </VStack>
     );

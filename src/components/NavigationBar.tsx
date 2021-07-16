@@ -38,7 +38,7 @@ export function NavigationBar(): ReactElement {
                     <Tab href='/education' active={activeRouteIndex === 1} marginRight={2}>
                         Education
                     </Tab>
-                    <Tab href='/work_experience' active={activeRouteIndex === 2}>
+                    <Tab href='/experience' active={activeRouteIndex === 2}>
                         Experience
                     </Tab>
                 </Flex>

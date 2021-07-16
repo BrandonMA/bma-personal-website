@@ -7,7 +7,7 @@ interface Props {
     title: string;
 }
 
-export function WrapCell({ title, children }: Props): ReactElement {
+export function WrapTitleCell({ title, children }: Props): ReactElement {
     return (
         <WrapItem>
             <Cell>

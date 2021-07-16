@@ -1,0 +1,5 @@
+@media (min-width: 756px) {
+    .wrap-github-cell {
+        max-width: 350px;
+    }
+}
