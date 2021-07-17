@@ -14,7 +14,7 @@ export function MobileTab({ href, active, children, ...others }: Props): ReactEl
     const navigateToRoute = useNavigateToRoute(href);
 
     return (
-        <MenuItem {...others} onClick={navigateToRoute} backgroundColor={active ? tabColor : undefined} variant='ghost' colorScheme='blue'>
+        <MenuItem {...others} onClick={navigateToRoute} backgroundColor={active ? tabColor : 'transparent'} variant='ghost'>
             {children}
         </MenuItem>
     );

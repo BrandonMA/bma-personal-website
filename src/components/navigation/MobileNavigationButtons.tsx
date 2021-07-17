@@ -8,7 +8,7 @@ export function MobileNavigationButtons(): ReactElement {
     const activeRouteIndex = useActiveRouteIndex();
 
     return (
-        <Menu>
+        <Menu colorScheme={'blue'} autoSelect={false} isLazy>
             <MenuButton as={Button}>
                 <HamburgerIcon />
             </MenuButton>

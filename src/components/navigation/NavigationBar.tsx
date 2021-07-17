@@ -8,6 +8,7 @@ import { LinkedInButton } from '../Buttons/LinkedInButton';
 import { useBackgroundColor } from '../../hooks/colors/useBackgroundColor';
 import { DesktopNavigationButtons } from './DesktopNavigationButtons';
 import { MobileNavigationButtons } from './MobileNavigationButtons';
+import { ColorModeToggle } from '../Buttons/ColorModeToggle';
 
 export function NavigationBar(): ReactElement {
     const foregroundColor = useForegroundColor();
@@ -36,10 +37,15 @@ export function NavigationBar(): ReactElement {
                     </Link>
                     <GitHubButton marginRight={2} />
                     <TwitterButton marginRight={2} />
-                    <LinkedInButton />
+                    <LinkedInButton marginRight={2} />
+                    <ColorModeToggle />
                 </Flex>
                 <Flex flex={1} flexDirection='row' />
-                {navigationType === 'desktop' ? <DesktopNavigationButtons /> : <MobileNavigationButtons />}
+                {navigationType === 'desktop' ? (
+                    <DesktopNavigationButtons />
+                ) : navigationType === 'mobile' ? (
+                    <MobileNavigationButtons />
+                ) : undefined}
             </Flex>
             <Flex backgroundColor={backgroundColor} height={'64px'} width='100%' flexShrink={0} />
         </>
