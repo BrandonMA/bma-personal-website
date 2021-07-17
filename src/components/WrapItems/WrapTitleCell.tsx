@@ -1,15 +1,15 @@
-import { Flex, Heading, WrapItem } from '@chakra-ui/react';
+import { Flex, Heading, WrapItem, WrapItemProps } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
-import { Cell } from './Cell';
+import { Cell } from '../Cell';
 
-interface Props {
+interface Props extends WrapItemProps {
     children: ReactElement | Array<ReactElement>;
     title: string;
 }
 
-export function WrapTitleCell({ title, children }: Props): ReactElement {
+export function WrapTitleCell({ title, children, ...others }: Props): ReactElement {
     return (
-        <WrapItem>
+        <WrapItem {...others}>
             <Cell>
                 <Flex flexDirection={'row'}>
                     <Heading marginBottom={4} size='sm'>

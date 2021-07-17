@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Container, Heading, Tag, VStack, Wrap } from '@chakra-ui/react';
-import { WrapGitHubCell } from '../components/WrapGitHubCell';
+import { WrapGitHubCell } from '../components/WrapItems/WrapGitHubCell';
 
 export function GitHub(): ReactElement {
     return (

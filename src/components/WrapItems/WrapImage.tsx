@@ -1,9 +1,9 @@
 import { ReactElement, useCallback, useState } from 'react';
 import Image from 'next/image';
-import { WrapItem, Link } from '@chakra-ui/react';
+import { WrapItem, Link, WrapItemProps } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-interface Props {
+interface Props extends WrapItemProps {
     certificate: string;
 }
 
@@ -12,8 +12,9 @@ const variants = {
     loaded: { scale: 1, opacity: 1, borderRadius: 8 }
 };
 
-export function WrapImage({ certificate }: Props): ReactElement {
+export function WrapImage({ certificate, ...others }: Props): ReactElement {
     const [loaded, setLoaded] = useState(false);
+
     const setLoadedActive = useCallback((event) => {
         if (event.target.src.indexOf('data:image/gif;base64') < 0) {
             setLoaded(true);
@@ -21,7 +22,7 @@ export function WrapImage({ certificate }: Props): ReactElement {
     }, []);
 
     return (
-        <WrapItem>
+        <WrapItem {...others}>
             <Link href={`/image-certificates/${certificate}`} target={'_blank'}>
                 <motion.div
                     className={'wrap-image'}

@@ -1,9 +1,9 @@
 import React, { ReactElement } from 'react';
-import { Flex, Icon, Link, Text, WrapItem } from '@chakra-ui/react';
-import { Cell } from './Cell';
+import { Flex, Icon, Link, Text, WrapItem, WrapItemProps } from '@chakra-ui/react';
+import { Cell } from '../Cell';
 import { GoOctoface, GoStar } from 'react-icons/go';
 
-interface Props {
+interface Props extends WrapItemProps {
     href: string;
     title: string;
     starCount: number;
@@ -11,9 +11,9 @@ interface Props {
     description: string;
 }
 
-export function WrapGitHubCell({ href, title, starCount, children, description }: Props): ReactElement {
+export function WrapGitHubCell({ href, title, starCount, children, description, ...others }: Props): ReactElement {
     return (
-        <WrapItem>
+        <WrapItem {...others}>
             <Link href={href} target={'_blank'} className={'wrap-github-cell'}>
                 <Cell>
                     <Flex marginBottom={4} flexDirection={'row'} alignItems={'center'}>

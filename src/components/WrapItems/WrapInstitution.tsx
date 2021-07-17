@@ -1,8 +1,8 @@
-import { Flex, Heading, Image, Link, Text, WrapItem } from '@chakra-ui/react';
+import { Flex, Heading, Image, Link, Text, WrapItem, WrapItemProps } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
-import { Cell } from './Cell';
+import { Cell } from '../Cell';
 
-interface Props {
+interface Props extends WrapItemProps {
     description: string;
     children: string;
     date: string;
@@ -10,9 +10,9 @@ interface Props {
     schoolHref: string;
 }
 
-export function WrapInstitution({ schoolHref, children, description, date, image }: Props): ReactElement {
+export function WrapInstitution({ schoolHref, children, description, date, image, ...others }: Props): ReactElement {
     return (
-        <WrapItem>
+        <WrapItem {...others}>
             <Link href={schoolHref} target={'_blank'}>
                 <Cell flexDirection={'row'}>
                     <Image borderRadius={'8px'} width={128} marginRight={4} alt={'ECE Logo'} src={image} />

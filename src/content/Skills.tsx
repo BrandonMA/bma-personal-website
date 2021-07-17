@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Heading, VStack, Wrap } from '@chakra-ui/react';
-import { WrapTitleCell } from '../components/WrapTitleCell';
-import { WrapTag } from '../components/WrapTag';
+import { WrapTitleCell } from '../components/WrapItems/WrapTitleCell';
+import { WrapTag } from '../components/WrapItems/WrapTag';
 
 export function Skills(): ReactElement {
     return (

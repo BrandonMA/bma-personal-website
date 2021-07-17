@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { WrapInstitution } from '../components/WrapInstitution';
+import { WrapInstitution } from '../components/WrapItems/WrapInstitution';
 import { Wrap } from '@chakra-ui/react';
 
 export function JobsList(): ReactElement {

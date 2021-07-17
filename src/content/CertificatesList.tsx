@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { WrapImage } from '../components/WrapImage';
+import { WrapImage } from '../components/WrapItems/WrapImage';
 import { certificates } from './data/certificates';
 import { Wrap } from '@chakra-ui/react';
 
