@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { Flex, Icon, Link, Tag, Text, WrapItem } from '@chakra-ui/react';
+import { Flex, Icon, Link, Text, WrapItem } from '@chakra-ui/react';
 import { Cell } from './Cell';
 import { GoOctoface, GoStar } from 'react-icons/go';
 

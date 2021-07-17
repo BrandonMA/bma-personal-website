@@ -4,6 +4,9 @@ import { useForegroundColor } from '../hooks/colors/useForegroundColor';
 import { useBorderColor } from '../hooks/colors/useBorderColor';
 import { Tab } from './Tab';
 import { useActiveRouteIndex } from '../hooks/UseActiveRouteIndex';
+import { GitHubButton } from './GitHubButton';
+import { TwitterButton } from './TwitterButton';
+import { LinkedInButton } from './LinkedInButton';
 
 export function NavigationBar(): ReactElement {
     const foregroundColor = useForegroundColor();
@@ -26,9 +29,12 @@ export function NavigationBar(): ReactElement {
                 zIndex={1000}
             >
                 <Flex flexDirection='row'>
-                    <Link target='_blank' download href={'https://www.icloud.com/iclouddrive/0edmzNNEEIPIOCWASka171UAw#CV'}>
+                    <Link marginRight={2} target='_blank' download href={'https://www.icloud.com/iclouddrive/0edmzNNEEIPIOCWASka171UAw#CV'}>
                         <Button>Resume</Button>
                     </Link>
+                    <GitHubButton marginRight={2} />
+                    <TwitterButton marginRight={2} />
+                    <LinkedInButton />
                 </Flex>
                 <Flex flex={1} flexDirection='row' />
                 <Flex flexDirection='row'>
