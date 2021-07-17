@@ -1,14 +1,16 @@
 import React, { ReactElement } from 'react';
-import { Heading, VStack, Wrap } from '@chakra-ui/react';
+import { Container, Heading, VStack, Wrap } from '@chakra-ui/react';
 import { WrapTitleCell } from '../components/WrapItems/WrapTitleCell';
 import { WrapTag } from '../components/WrapItems/WrapTag';
 
 export function Skills(): ReactElement {
     return (
         <VStack spacing='12px'>
-            <Heading textAlign='center' size='md'>
-                Skills & Knowledge
-            </Heading>
+            <Container>
+                <Heading textAlign='center' size='md'>
+                    Skills & Knowledge
+                </Heading>
+            </Container>
             <Wrap justify='center'>
                 <WrapTitleCell title='Programming Languages & Frameworks'>
                     <Wrap>

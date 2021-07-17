@@ -1,12 +1,10 @@
-import React, { ForwardedRef, forwardRef } from 'react';
-import { Avatar, useTheme } from '@chakra-ui/react';
+import React, { ReactElement } from 'react';
+import { Avatar } from '@chakra-ui/react';
 
 interface Props {
     size?: 'md' | '2xl';
 }
 
-export const ProfilePicture = forwardRef(({ size = 'md' }: Props, ref: ForwardedRef<any>) => {
+export function ProfilePicture({ size }: Props): ReactElement {
     return <Avatar src='/me.jfif' alt='Profile Image' size={size} />;
-});
-
-ProfilePicture.displayName = 'ProfilePicture';
+}

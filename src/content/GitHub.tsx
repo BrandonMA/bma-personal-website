@@ -4,10 +4,12 @@ import { WrapGitHubCell } from '../components/WrapItems/WrapGitHubCell';
 
 export function GitHub(): ReactElement {
     return (
-        <>
-            <VStack spacing={'12px'}>
-                <Heading size={'lg'}>GitHub Repos</Heading>
-            </VStack>
+        <VStack spacing='12px'>
+            <Container>
+                <Heading textAlign={'center'} size={'lg'}>
+                    GitHub Repos
+                </Heading>
+            </Container>
             <Wrap justify={'center'}>
                 <WrapGitHubCell
                     href={'https://github.com/BrandonMA/fractal'}
@@ -59,6 +61,6 @@ export function GitHub(): ReactElement {
                     </Tag>
                 </WrapGitHubCell>
             </Wrap>
-        </>
+        </VStack>
     );
 }

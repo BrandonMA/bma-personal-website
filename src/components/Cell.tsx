@@ -1,16 +1,15 @@
-import { BoxProps, Flex, useTheme } from '@chakra-ui/react';
+import { Flex, FlexProps } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import { useForegroundColor } from '../hooks/colors/useForegroundColor';
 
-export function Cell(props: BoxProps): ReactElement {
+export function Cell(props: FlexProps): ReactElement {
     const foregroundColor = useForegroundColor();
-    const theme = useTheme();
 
     return (
         <Flex
             padding={'16px'}
-            borderRadius={theme.radii.base}
-            shadow={theme.shadows.sm}
+            borderRadius={'base'}
+            shadow={'sm'}
             backgroundColor={foregroundColor}
             className='cell'
             flexDirection={'column'}

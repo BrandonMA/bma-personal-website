@@ -1,21 +1,17 @@
-import { ButtonProps, MenuItem } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import React, { ReactElement, useCallback } from 'react';
-import { useTabColor } from '../hooks/colors/useTabColor';
+import { MenuItem, MenuItemProps } from '@chakra-ui/react';
+import React, { ReactElement } from 'react';
+import { useTabColor } from '../../hooks/colors/useTabColor';
+import { useNavigateToRoute } from '../../hooks/useNavigateToRoute';
 
-interface Props extends ButtonProps {
+interface Props extends MenuItemProps {
     href: string;
     active: boolean;
     children: string;
 }
 
 export function MobileTab({ href, active, children, ...others }: Props): ReactElement {
-    const router = useRouter();
     const tabColor = useTabColor();
-
-    const navigateToRoute = useCallback(() => {
-        router.push(href);
-    }, [href, router]);
+    const navigateToRoute = useNavigateToRoute(href);
 
     return (
         <MenuItem {...others} onClick={navigateToRoute} backgroundColor={active ? tabColor : undefined} variant='ghost' colorScheme='blue'>

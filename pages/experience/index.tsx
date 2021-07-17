@@ -1,11 +1,10 @@
 import React, { ReactElement } from 'react';
 import { ChakraProvider, ScaleFade, VStack } from '@chakra-ui/react';
-import { NavigationBar } from '../../src/components/NavigationBar';
+import { NavigationBar } from '../../src/components/navigation/NavigationBar';
 import { Background } from '../../src/components/Background';
 import { Header } from '../../src/components/Header';
 import { GitHub } from '../../src/content/GitHub';
-import { WorkDescription } from '../../src/content/WorkDescription';
-import { JobsList } from '../../src/content/JobsList';
+import { Work } from '../../src/content/Work';
 
 export default function Experience(): ReactElement {
     return (
@@ -16,8 +15,7 @@ export default function Experience(): ReactElement {
                 <ScaleFade in>
                     <VStack spacing='48px' width='100%' alignItems='center' justifyContent='center' flexDirection='column' marginBottom={4}>
                         <GitHub />
-                        <WorkDescription />
-                        <JobsList />
+                        <Work />
                     </VStack>
                 </ScaleFade>
             </Background>

@@ -1,7 +1,7 @@
 import { Container, Heading, Text, VStack } from '@chakra-ui/react';
 import React, { ReactElement } from 'react';
 
-export function AboutMe(): ReactElement {
+export function AboutMeDescription(): ReactElement {
     return (
         <Container>
             <VStack spacing='12px'>

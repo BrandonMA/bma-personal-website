@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
-import React, { ReactElement, useCallback } from 'react';
-import { useTabColor } from '../hooks/colors/useTabColor';
+import React, { ReactElement } from 'react';
+import { useTabColor } from '../../hooks/colors/useTabColor';
+import { useNavigateToRoute } from '../../hooks/useNavigateToRoute';
 
 interface Props extends ButtonProps {
     href: string;
@@ -10,12 +10,8 @@ interface Props extends ButtonProps {
 }
 
 export function DesktopTab({ href, active, children, ...others }: Props): ReactElement {
-    const router = useRouter();
     const tabColor = useTabColor();
-
-    const navigateToRoute = useCallback(() => {
-        router.push(href);
-    }, [href, router]);
+    const navigateToRoute = useNavigateToRoute(href);
 
     return (
         <Button {...others} onClick={navigateToRoute} backgroundColor={active ? tabColor : undefined} variant='ghost' colorScheme='blue'>
