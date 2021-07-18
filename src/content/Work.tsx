@@ -9,7 +9,7 @@ export function Work(): ReactElement {
             <WorkDescription />
             <Wrap justify={'center'}>
                 <WrapInstitution
-                    schoolHref={'https://www.lachispaincubadora.com/'}
+                    schoolHref={'https://enchispate.com/'}
                     description={'Web App'}
                     date={'2021'}
                     image={'/chispa.jpeg'}
